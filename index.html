@@ -2,36 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Welcome to My First Webpage</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Internal CSS for one element */
+        .internal-style {
+            font-style: italic;
+            color: #16a085;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Welcome to My First Webpage</h1>
+<nav>
+    <a href="index.html" style="color:white; text-decoration:none; margin: 0 10px;">Home</a>
+    <a href="about.html" style="color:white; text-decoration:none; margin: 0 10px;">About</a>
+    <a href="feedback.html" style="color:white; text-decoration:none; margin: 0 10px;">Feedback</a>
+</nav>
 
-    <p>
-        Hello! My name is <strong>Kashish</strong>. I am a computer science student who enjoys
-        <em>learning new technologies</em> and building creative projects.
-    </p>
+<main>
+    <h1 id="main-heading">Welcome to My First Webpage</h1>
 
-    <h3>My Hobbies</h3>
+    <div class="content-box">
+        <p class="highlight">Hello! My name is Kashish. I love coding and learning new technologies.</p>
+        
+
+        <div class="absolute-box">Important</div>
+    </div>
+
+    <h2 class="sticky-heading">My Hobbies</h2>
     <ol>
-        <li>Programming</li>
-        <li>Reading tech blogs</li>
-        <li>Fitness training</li>
+        <li>Coding</li>
+        <li>Reading</li>
+        <li>Gaming</li>
     </ol>
 
-    <h3>My Favorite Foods</h3>
+    <h2 class="sticky-heading">My Favorite Foods</h2>
     <ul>
         <li>Pizza</li>
-        <li>Momo</li>
-        <li>Fried Rice</li>
+        <li>Burger</li>
+        <li>Ice cream</li>
     </ul>
 
-    <p>
-        <u>Click below</u> to learn more about me:
-    </p>
+    <p class="internal-style">I enjoy learning new skills and improving myself every day.</p>
 
-    <a href="about.html">Go to About Page</a>
+    <p><a href="about.html">Go to About Page</a></p>
+</main>
 
 </body>
 </html>

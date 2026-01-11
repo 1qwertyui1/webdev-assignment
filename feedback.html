@@ -3,44 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Feedback</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h2>Feedback Form</h2>
+<a href="index.html" style="color: #2980b9; font-weight:bold;">Home</a>
 
+<h2 id="main-heading">Feedback Form</h2>
+
+<div class="content-box">
     <form>
+        <label for="fullname">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname" required placeholder="Your Name"><br><br>
 
-        <label>Full Name:</label><br>
-        <input type="text" name="fullname" placeholder="Enter your full name" required minlength="3"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required placeholder="Your Email"><br><br>
 
-        <label>Email Address:</label><br>
-        <input type="email" name="email" placeholder="Enter your email" required><br><br>
+        <p>Rating:</p>
+        <input type="radio" name="rating" value="Very Satisfied" required> Very Satisfied<br>
+        <input type="radio" name="rating" value="Satisfied"> Satisfied<br>
+        <input type="radio" name="rating" value="Neutral"> Neutral<br>
+        <input type="radio" name="rating" value="Unsatisfied"> Unsatisfied<br><br>
 
-        <label>Rate Your Experience:</label><br>
-        <input type="radio" name="rating" required> Very Satisfied<br>
-        <input type="radio" name="rating"> Satisfied<br>
-        <input type="radio" name="rating"> Neutral<br>
-        <input type="radio" name="rating"> Unsatisfied<br><br>
+        <p>Interests:</p>
+        <input type="checkbox" name="interest" value="Web Development"> Web Development<br>
+        <input type="checkbox" name="interest" value="Mobile Development"> Mobile Development<br>
+        <input type="checkbox" name="interest" value="AI & Machine Learning"> AI & Machine Learning<br><br>
 
-        <label>Your Interests:</label><br>
-        <input type="checkbox"> Web Development<br>
-        <input type="checkbox"> Mobile Development<br>
-        <input type="checkbox"> AI & Machine Learning<br><br>
-
-        <label>Select Country:</label><br>
-        <select required>
-            <option value="">--Select--</option>
-            <option>Nepal</option>
-            <option>India</option>
-            <option>USA</option>
+        <label for="country">Country:</label><br>
+        <select id="country" name="country">
+            <option value="Nepal">Nepal</option>
+            <option value="USA">USA</option>
+            <option value="India">India</option>
         </select><br><br>
 
-        <label>Write your feedback here:</label><br>
-        <textarea rows="5" cols="30" placeholder="Write your feedback here" required maxlength="200"></textarea><br><br>
+        <label for="message">Write your feedback here:</label><br>
+        <textarea id="message" name="message" rows="4" cols="30" placeholder="Your feedback" required></textarea><br><br>
 
-        <button type="submit">Submit</button>
-
+        <input type="submit" value="Submit">
     </form>
+</div>
 
 </body>
 </html>
