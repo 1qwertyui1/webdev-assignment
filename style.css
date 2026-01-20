@@ -1,75 +1,115 @@
+
 body {
-    background-color: #f0f8ff; 
-    font-family: Arial, Helvetica, sans-serif; 
     margin: 0;
-    padding: 0;
+    padding-top: 70px; 
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
 }
 
 h1, h2 {
-    color: #2c3e50; 
+    color: #2c3e50;
 }
 
 p {
     font-size: 16px;
-    color: #34495e; 
+    color: #333;
 }
 
-.highlight {
-    background-color: #f9e79f;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-#main-heading {
-    color: #e74c3c; 
-    text-transform: uppercase;
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .content-box {
-    background-color: #d5f5e3;
     width: 300px;
     padding: 20px;
     border: 2px solid black;
     margin: 15px;
+    background-color: #ffffff;
     box-sizing: border-box;
-}
-
-span.special {
-    color: #8e44ad;
-    font-weight: bold;
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #2980b9;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    z-index: 1000;
-}
-
-main {
     position: relative;
-    padding-top: 60px; 
 }
 
 .absolute-box {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #f39c12;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 3px;
+    top: 5px;
+    right: 5px;
+    background-color: #ddd;
+    padding: 5px;
+    font-size: 12px;
 }
 
-.sticky-heading {
-    position: sticky;
-    top: 80px;
-    background-color: #ecf0f1;
-    padding: 5px;
-    border-bottom: 1px solid #bdc3c7;
+.special {
+    color: red;
+    font-weight: bold;
+}
+
+/* =========================
+   PHOTOS PAGE FIXED
+========================= */
+
+/* Common image rules */
+.photos-flex img,
+.photos-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+/* ---------- FLEXBOX GALLERY ---------- */
+.photos-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Mobile: 1 image per row */
+@media (max-width: 768px) {
+    .photos-flex img {
+        flex: 0 0 100%;
+    }
+}
+
+/* Tablet: 2 images per row */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .photos-flex img {
+        flex: 0 0 calc(50% - 15px);
+    }
+}
+
+/* Desktop: 4 images per row */
+@media (min-width: 1025px) {
+    .photos-flex img {
+        flex: 0 0 calc(25% - 15px);
+    }
+}
+
+/* ---------- GRID GALLERY ---------- */
+.photos-grid {
+    display: grid;
+    gap: 15px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .photos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .photos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .photos-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
